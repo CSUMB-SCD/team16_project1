@@ -10,5 +10,30 @@
         <i class="material-icons">home</i>
       </a>
     </li>
+    <li>
+      <a routerLink="products" [class.activated]="currentUrl == '/products'">
+        <i class="material-icons">book</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="product-expanded" [class.activated]="currentUrl == '/product-expanded'">
+        <i class="material-icons">expand_more</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="cart" [class.activated]="currentUrl == '/cart'">
+        <i class="material-icons">shopping_cart</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="checkout" [class.activated]="currentUrl == '/checkout'">
+        <i class="material-icons">check</i>
+      </a>
+    </li>
+    <li>
+      <a routerLink="confirmation" [class.activated]="currentUrl == '/confirmation'">
+        <i class="material-icons">confirmation</i>
+      </a>
+    </li>
   </ul>
 </nav>
