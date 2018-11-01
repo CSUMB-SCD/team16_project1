@@ -1,0 +1,32 @@
+body{
+  width: 700px;
+}
+
+#content{
+  text-align: center;
+  margin: auto;
+}
+
+#ProdInfo{
+  float: center;
+  text-align: left;
+  margin: auto;
+  padding-left: 100px
+}
+
+#ProdImage{
+  float: left;
+  text-align: left;
+  margin: auto;
+  width: 100px;
+}
+
+#ProdPrice{
+  float: right;
+  text-align: right;
+  margin: auto;
+}
+
+#ProdList{
+  float: clear;
+}
