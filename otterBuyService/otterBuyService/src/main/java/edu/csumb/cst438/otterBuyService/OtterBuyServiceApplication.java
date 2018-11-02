@@ -1,4 +1,4 @@
-package edu.csumb.cst438.otterBuyService;
+package edu.csumb.cst438.otterbuyservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

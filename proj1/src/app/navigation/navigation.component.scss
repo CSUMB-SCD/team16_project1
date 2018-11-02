@@ -1,14 +1,15 @@
 nav {
   background: #2D2E2E;
-  height: 100%;
-
+  width:100% ;
+  display:flex;
   ul {
-      list-style-type: none;
+      display: flex;
       padding: 0;
-      margin: 0;
-      overflow: hidden;
+      margin: auto;
+      list-style-type: none;
 
       li {
+        float: left;
 
           a {
               color: #fff;
