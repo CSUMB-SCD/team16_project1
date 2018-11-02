@@ -1,16 +1,12 @@
-package edu.csumb.cst438.otterbuyservice;
+package edu.csumb.cst438.otterbuyservice.business;
 
-import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class OtterBuyServiceApplicationTests {
-
-	@Test
-	public void contextLoads() {
-	}
-
+public class ManagerTester{
+    //What to test? 
 }
