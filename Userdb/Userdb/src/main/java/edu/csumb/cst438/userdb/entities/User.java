@@ -2,11 +2,20 @@ package edu.csumb.cst438.userdb.entities;
 
 public class User{
     String username;
+    String password;
     double credits;
 
-    public User(String username,double credits){
+    public User(String username,String password, double credits){
         this.username = username;
+        this.password = password;
         this.credits = credits;
+    }
+
+    /**
+     * @return the password
+     */
+    public String getPassword() {
+        return this.password;
     }
 
     /**
@@ -23,6 +32,12 @@ public class User{
         return this.username;
     }
 
+    /**
+     * @param password the password to set
+     */
+    public void setPassword(String password) {
+        this.password = password;
+    }
     /**
      * @param credits the credits to set
      */
