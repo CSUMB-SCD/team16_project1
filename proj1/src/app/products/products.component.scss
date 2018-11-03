@@ -1,32 +1,17 @@
-body{
-  width: 700px;
-}
-
 #content{
   text-align: center;
   margin: auto;
 }
 
-#ProdInfo{
-  float: center;
+.ProdName{
   text-align: left;
-  margin: auto;
-  padding-left: 100px
-}
-
-#ProdImage{
-  float: left;
-  text-align: left;
-  margin: auto;
-  width: 100px;
-}
-
-#ProdPrice{
-  float: right;
-  text-align: right;
-  margin: auto;
 }
 
 #ProdList{
-  float: clear;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 30px
+}
+
+.product{
 }
