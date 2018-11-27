@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "productdb",
+                "projectName": "productdb",
+                "workingDirectory": "c:\\Users\\Judith\\Documents\\DesktopItems\\CST-438-SoftwareEngineering\\finalproj\\team16_project1\\productdb\\productdb",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "productdb",
+                "projectName": "productdb",
+                "workingDirectory": "c:\\Users\\Judith\\Documents\\DesktopItems\\CST-438-SoftwareEngineering\\finalproj\\team16_project1\\productdb\\productdb",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}
