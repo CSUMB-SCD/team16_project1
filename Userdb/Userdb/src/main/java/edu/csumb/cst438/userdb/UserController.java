@@ -21,13 +21,13 @@ public class UserController{
         return result;
     }
 
-    @GetMapping("/user/{name}")
+    @GetMapping("/username/{name}")
     public User getUsername (@PathVariable String name) {
         User result = userRepo.findUser(name);
         return result;
     }
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/userid/{id}")
     public User getUserId (@PathVariable String id) {
         User result = userRepo.findId(id);
         return result;

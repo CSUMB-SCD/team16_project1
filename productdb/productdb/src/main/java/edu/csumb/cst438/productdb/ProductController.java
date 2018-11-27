@@ -21,14 +21,14 @@ public class ProductController{
         return result;
     }
 
-    @GetMapping("/name/{name}")
+    @GetMapping("/productName/{name}")
     public Product getProductName (@PathVariable String name) {
        Product result = productRepo.findName(name);
         return result;
     }
 
-    @GetMapping("/id/{id}")
-    public Product getRobotById (@PathVariable String id) {
+    @GetMapping("/productid/{id}")
+    public Product getProductId (@PathVariable String id) {
         Product result = productRepo.findId(id);
         return result;
     }
