@@ -7,9 +7,8 @@ body {
 }
 
 #container {
- display: grid;
  grid-template-columns: 70px auto;
- height: 100%;
+ width: 100%;
 }
 
 #content {
