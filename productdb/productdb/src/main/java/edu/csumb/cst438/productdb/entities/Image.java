@@ -3,12 +3,12 @@ package edu.csumb.cst438.productdb.entities;
 public class Image{
     private String image;
 
-    public Image(String images){
-        this.image = images;
+    public Image (String image){
+        this.image = image;
     }
     
-    public void setImages(String images) {
-        this.image = images;
+    public void setImages (String image) {
+        this.image = image;
     }
 
     public String getImages() {
