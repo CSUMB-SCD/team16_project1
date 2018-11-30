@@ -6,12 +6,23 @@ public class Product{
     private String id;
     private Image image;
     private int stockNum;
+    private String name;
 
-    public Product(Image image,Description description,Price price, int stockNum){
+
+    public Product(Image image,String name,Description description,Price price, int stockNum){
         this.description = description;
         this.price = price;
         this.image = image;
         this.stockNum = stockNum;
+        this.name = name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+   
+    public String getName() {
+        return this.name;
     }
 
     public void setId(String id){
@@ -47,7 +58,7 @@ public class Product{
     }
   
     public Image getImage() {
-        return image;
+        return this.image;
     }
 
     public int getStockNum() {
