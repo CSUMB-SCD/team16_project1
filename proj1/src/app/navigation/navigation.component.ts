@@ -6,6 +6,7 @@ import { filter } from 'rxjs/operators';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
+
 export class NavigationComponent implements OnInit {
 
   currentUrl: string;
