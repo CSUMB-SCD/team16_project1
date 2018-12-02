@@ -1,13 +1,14 @@
 <div id="content">
-  <input type="text" name="search" placeholder="  search">
-  <input type="submit" value="Search">
-  <br>
+  <div id="search">
+      <input type="text" name="search" placeholder="  search">
+      <input type="image" src="https://static.thenounproject.com/png/101791-200.png" width="20px" name="saveForm" class="btTxt submit" id="saveForm" />
+    </div>
   <br>
   <h2>Cart</h2>
   <hr>
-  <div id="products">
-    <table id="ProdList">
-      <tr class="product">
+  <div id="products" >
+    <table id="ProdList" class="table">
+      <tr class="product table-primary text-dark">
         <td>
             <img src="https://openclipart.org/image/300px/svg_to_png/194077/Placeholder.png" width="90px">
         </td>
@@ -22,9 +23,30 @@
           <br>
           <select>
             <option value=1>1</option>
+
           </select>
         </td>
       </tr>
+      <br>
+      <tr class="product table-info text-dark">
+          <td>
+              <img src="https://openclipart.org/image/300px/svg_to_png/194077/Placeholder.png" width="90px">
+          </td>
+          <td>
+            <h3 class=ProdName>Product Name</h3>
+            <br>
+            <p>Hello this is basic placeholder text</p>
+          </td>
+          <td>
+              <input type="image" src="https://vignette.wikia.nocookie.net/mysingingmonsters/images/2/24/Red-x.png/revision/latest?cb=20171113115328" width="10px" name="saveForm" class="btTxt submit" id="saveForm" />
+            <img >
+            <br>
+            <select>
+              <option value=1>1</option>
+
+            </select>
+          </td>
+        </tr>
     </table>
   </div>
   <hr>
