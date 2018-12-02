@@ -1,0 +1,10 @@
+{
+  "/api": {
+  "target": "https://team16-productdbsvc.herokuapp.com/products",
+  "secure": false,
+  "pathRewrite": {
+  "^/api": ""
+  },
+  "changeOrigin": true
+  }
+  }
