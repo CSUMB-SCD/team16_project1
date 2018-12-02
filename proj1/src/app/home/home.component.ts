@@ -30,7 +30,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 export class HomeComponent implements OnInit {
 
   product$: Object;
-
+arraym = [];
   constructor(private data: DataService) { }
 
   ngOnInit() {
