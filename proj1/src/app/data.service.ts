@@ -9,18 +9,24 @@ export class DataService {
   constructor(private http: HttpClient) {}
 
   getProducts() {
-    // return this.http.get();
-    return null;
+     return this.http.get('http://team16-productdbsvc.herokuapp.com/products');
+    // return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
 
    getProductID(productID) {
-        // return this.http.get();
-        return null;
+      return this.http.get('https://team16-productdbsvc.herokuapp.com/productid/' + productID);
   }
 
   getUser(userID) {
-        // return this.http.get();
-        return null;
+      return this.http.get('https://team16-userdbsvc.herokuapp.com/userid/' + userID);
   }
+
+  getUsername(username) {
+    return this.http.get('https://team16-userdbsvc.herokuapp.com/username/' + username);
+  }
+
+  // getPassword() {
+  //   return this.http.get("https://team16-userdbsvc.herokuapp.com/password/" + password);
+  // }
 
 }
