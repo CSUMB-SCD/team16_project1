@@ -7,50 +7,32 @@
   <h2>Cart</h2>
   <hr>
   <div id="products" >
-    <table id="ProdList" class="table">
-      <tr class="product table-primary text-dark">
-        <td>
-            <img src="https://openclipart.org/image/300px/svg_to_png/194077/Placeholder.png" width="90px">
-        </td>
-        <td>
-          <h3 class=ProdName>Product Name</h3>
-          <br>
-          <p>Hello this is basic placeholder text</p>
-        </td>
-        <td>
-            <input type="image" src="https://vignette.wikia.nocookie.net/mysingingmonsters/images/2/24/Red-x.png/revision/latest?cb=20171113115328" width="10px" name="saveForm" class="btTxt submit" id="saveForm" />
-          <img >
-          <br>
-          <select>
-            <option value=1>1</option>
-
-          </select>
-        </td>
-      </tr>
-      <br>
-      <tr class="product table-info text-dark">
-          <td>
+    <table id="ProdList" class="table-sm table-hover">
+      <tbody>
+        <tr class="product table-primary text-dark">
+          <td class="tableE">
               <img src="https://openclipart.org/image/300px/svg_to_png/194077/Placeholder.png" width="90px">
           </td>
-          <td>
-            <h3 class=ProdName>Product Name</h3>
-            <br>
-            <p>Hello this is basic placeholder text</p>
+          <td class="tableE">
+            <h3>Product Name</h3>
+            Hello this is basic placeholder text
           </td>
           <td>
-              <input type="image" src="https://vignette.wikia.nocookie.net/mysingingmonsters/images/2/24/Red-x.png/revision/latest?cb=20171113115328" width="10px" name="saveForm" class="btTxt submit" id="saveForm" />
-            <img >
-            <br>
-            <select>
-              <option value=1>1</option>
-
-            </select>
+              <br>
+              <h6># of Items in Order:</h6>
+              <select style="float:right">
+                  <option value=1>1</option>
+              </select>
+            </td>
+          <td id="cancel">
+              <input type="image" src="https://vignette.wikia.nocookie.net/mysingingmonsters/images/2/24/Red-x.png/revision/latest?cb=20171113115328" width="20px" name="saveForm" class="btTxt submit" id="saveForm" />
           </td>
         </tr>
+      </tbody>
     </table>
   </div>
   <hr>
   <p id="subtotal"> Subtotal: $</p>
   <br>
-  <button type="button" class="btn btn-primary">Checkout</button>
+  <button routerLink="/checkout" type="button" class="btn btn-primary">Checkout</button>
 </div>
