@@ -6,6 +6,7 @@
   <div id="contents">
     <div id ="welcomeText">
       <h1>Welcome!</h1>
+      <p>Check Out our New Arrivals!</p>
       <div id="search">
           <input type="text" name="search" placeholder="  search">
           <input type="image" src="https://static.thenounproject.com/png/101791-200.png" width="20px" name="saveForm" class="btTxt submit" id="saveForm" />
@@ -13,13 +14,14 @@
       <br>
     </div>
 
-    <div id="product">
-      <p>Check Out our New Arrivals!</p>
-
+    <div id="product" class = "text-dark">
         <ul [@listStagger] = "product$">
           <li *ngFor="let product of product$">
               <a  routerLink="'/products'"> {{ product.name }}</a>
-              <!-- ${} -->
+              <ul>
+                  <li><img src= '{{ product.image["images"] }}'width="100px" > </li>
+                  <li>{{ product.description["description"] }}</li>
+              </ul>
           </li>
         </ul>
 

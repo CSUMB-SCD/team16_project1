@@ -34,11 +34,18 @@
         </table>
         <hr>
 
-        <!-- <ul [@listStagger] = "product$">
-          <li *ngFor="let product of product$">
-              <a  [routerLink]="['/products/{}']">${route-text}</a>
-              ${}
-          </li>
-        </ul> -->
+        <div id="product" class = "text-dark">
+            <ul [@listStagger] = "product$">
+              <li *ngFor="let product of product$">
+                  <a  routerLink="'/products'"> {{ product.name }}</a>
+                  <ul>
+                      <li><img src= '{{ product.image["images"] }}'width="100px" > </li>
+                      <li>Description: {{ product.description["description"] }}</li>
+                      <li>Quantity: {{ product.stockNum }}</li>
+                  </ul>
+              </li>
+            </ul>
+        </div>
+
       </div>
   </div>
