@@ -12,7 +12,7 @@ export class DataService {
     return this.http.get('https://team16-productdbsvc.herokuapp.com/products');
   }
 
-   getProductID(productID) {
+  getProductID(productID) {
       return this.http.get('https://team16-productdbsvc.herokuapp.com/productid/' + productID);
   }
 
