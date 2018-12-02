@@ -1,8 +1,8 @@
-<div *ngIf = "product$">
+<div *ngIf = "product$" >
     <h1>{{ product$.name }}</h1>
-    <ul>
-        <li><img src= '{{ product$.image["images"] }}'width="100px" > </li>
-        <li>Description: {{ product$.description["description"] }}</li>
-        <li>Quantity: {{ product$.stockNum }}</li>
+    <ul class= "text-dark">
+        <li><img src= '{{ product$.image["images"] }}'width="100px" >
+         {{ product$.description["description"] }} <br>
+        Quantity: {{ product$.stockNum }}</li>
       </ul>
   </div>

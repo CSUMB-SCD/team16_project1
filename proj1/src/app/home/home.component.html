@@ -17,9 +17,9 @@
     <div id="product" class = "text-dark">
         <ul [@listStagger] = "product$">
           <li *ngFor="let product of product$">
-              <a  routerLink="'/products'"> {{ product.name }}</a>
+              <a  routerLink="/product-expanded/{{product.id}}"> {{ product.name }}</a>
               <ul>
-                  <li><img src= '{{ product.image["images"] }}'width="100px" > </li>
+                  <li><img src= '{{ product.image["images"] }}' width="100px" > </li>
                   <li>{{ product.description["description"] }}</li>
               </ul>
           </li>
