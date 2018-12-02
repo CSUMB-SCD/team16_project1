@@ -35,8 +35,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.data.getProducts().subscribe(
-      data => this.product$ = data
-    );
+      data => this.product$ = data);
   }
 
 }
