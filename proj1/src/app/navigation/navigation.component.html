@@ -4,11 +4,6 @@
       <a id="logo">OtterBuy</a>
     </li>
     <li>
-      <a routerLink="" [class.activated]="currentUrl == '/'">
-        <i class="material-icons">person</i>
-      </a>
-    </li>
-    <li>
       <a routerLink="home" [class.activated]="currentUrl == '/home'">
         <i class="material-icons">home</i>
       </a>
@@ -19,24 +14,17 @@
       </a>
     </li>
     <li>
-      <a routerLink="product-expanded" [class.activated]="currentUrl == '/product-expanded'">
-        <i class="material-icons">expand_more</i>
-      </a>
-    </li>
-    <li>
       <a routerLink="cart" [class.activated]="currentUrl == '/cart'">
         <i class="material-icons">shopping_cart</i>
       </a>
     </li>
     <li>
-      <a routerLink="checkout" [class.activated]="currentUrl == '/checkout'">
-        <i class="material-icons">check</i>
+      <a routerLink="/confirmation" [class.activated]="currentUrl == '/confirmation'">
+        <i class="material-icons">confirm</i>
       </a>
     </li>
     <li>
-      <a routerLink="confirmation" [class.activated]="currentUrl == '/confirmation'">
-        <i class="material-icons">confirmation</i>
-      </a>
+        <button routerLink="" type="button" class="btn btn-success btn-sm" id="login" >Login</button>
     </li>
   </ul>
 </nav>

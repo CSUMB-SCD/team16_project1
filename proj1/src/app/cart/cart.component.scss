@@ -10,7 +10,7 @@
 #ProdList{
   margin-left: auto;
   margin-right: auto;
-  border-spacing: 30px
+  text-align: left;
 }
 
 #search{
@@ -18,4 +18,8 @@
 
 #subtotal{
   float: right;
+}
+
+#cancel{
+  background-color: pink;
 }

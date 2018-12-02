@@ -1,12 +1,14 @@
 <div id="content">
-      <input type="text" name="search" placeholder="  search">
-      <input type="submit" value="Search">
+      <div id="search">
+        <input type="text" name="search" placeholder="  search">
+        <input type="image" src="https://static.thenounproject.com/png/101791-200.png" width="20px" name="saveForm" class="btTxt submit" id="saveForm" />
+      </div>
       <br>
       <h2>Products</h2>
       <hr>
       <div id="products">
-        <table id="ProdList">
-          <tr class="product">
+        <table id="ProdList" class="table-sm table-hover">
+          <tr class="product table-primary text-dark">
             <td>
                 <img src="https://openclipart.org/image/300px/svg_to_png/194077/Placeholder.png" width="90px">
             </td>
@@ -15,11 +17,22 @@
               <p>Hello this is basic placeholder text</p>
             </td>
             <td>
+              <h5>$Price</h5>
+              <h6>In Stock: num</h6>
+            </td>
+            <td>
+              <br>
               <img src="https://png.icons8.com/windows/1600/add-shopping-cart.png" width="30px">
-              <h4>Price</h4>
+            </td>
+            <td id="seeMore">
+              <br>
+              <a routerLink="/product-expanded">
+                  <i class="material-icons">expand_more</i>
+                </a>
             </td>
           </tr>
         </table>
+        <hr>
 
         <div id="product" class = "text-dark">
             <ul [@listStagger] = "product$">
