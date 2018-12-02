@@ -28,17 +28,15 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 
 export class ProductExpandedComponent implements OnInit {
 
-  product$: any;
+  product$: Object;
 
-  constructor(private data: DataService, private route : ActivatedRoute) {
-    this.route.params.subscribe(params => this.product$ = params.id);
+  constructor(private data: DataService, private route: ActivatedRoute) {
+     this.route.params.subscribe(params => this.product$ = params.id);
 
   }
 
   ngOnInit() {
-    this.data.getProductID(this.product$).subscribe(
-      data => this.product$ = data
-    );
+    this.data.getProductID(this.product$).subscribe(data => this.product$ = data);
   }
 
 }
