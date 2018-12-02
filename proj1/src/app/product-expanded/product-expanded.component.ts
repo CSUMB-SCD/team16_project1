@@ -30,7 +30,7 @@ export class ProductExpandedComponent implements OnInit {
 
   product$: any;
 
-  constructor(private data: DataService, private route : ActivatedRoute) {
+  constructor(private data: DataService, private route: ActivatedRoute) {
     this.route.params.subscribe(params => this.product$ = params.id);
 
   }

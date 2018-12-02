@@ -10,11 +10,11 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-    path: '',
+  path: '',
   component: LoginComponent
   },
   {
-    path: 'home',
+  path: 'home',
   component: HomeComponent
   },
   {
@@ -26,11 +26,15 @@ const routes: Routes = [
   component: ProductExpandedComponent
   },
   {
-    path: 'cart',
+  path: 'detail/:id',
+  component: ProductExpandedComponent
+  },
+  {
+  path: 'cart',
   component: CartComponent
   },
   {
-    path: 'checkout',
+  path: 'checkout',
   component: CheckoutComponent
   }
 ];
