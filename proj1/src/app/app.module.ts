@@ -1,8 +1,8 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {HttpClientModule} from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -25,17 +25,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CheckoutComponent,
     ConfirmationComponent,
     CartComponent,
-    ProductExpandedComponent
+    ProductExpandedComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
    // HttpClient
-   BrowserAnimationsModule
-
+   BrowserAnimationsModule,
+   FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 export class AppModule { }
