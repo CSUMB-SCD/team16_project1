@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 @Component({
@@ -7,9 +7,10 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./navigation.component.scss']
 })
 
-export class NavigationComponent implements OnInit {
+export class NavigationComponent implements OnInit, AfterViewChecked {
 
   currentUrl: string;
+  logged: boolean;
 
   constructor(private router: Router) {
     // router.events.subscribe((_: NavigationEnd) => this.currentUrl = _.url);
@@ -17,6 +18,15 @@ export class NavigationComponent implements OnInit {
    }
 
   ngOnInit() {
+  }
+
+  ngAfterViewChecked() {
+    this.logged = Number(localStorage.getItem('currentState')) === 1;
+  }
+
+  logout() {
+    localStorage.removeItem('currentUser');
+    localStorage.setItem('currentState', '0');
   }
 
 }
