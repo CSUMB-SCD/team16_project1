@@ -24,11 +24,10 @@
       </a>
     </li>
     <li *ngIf='!logged'>
-        <button routerLink="" type="button" class="btn btn-info btn-sm" id="login" >Login</button>
+        <a><button routerLink="" type="button" class="btn btn-info btn-sm" id="login" >Login</button></a>
     </li>
     <li *ngIf="logged">
-        <button routerLink="/home" (click)="logout()" type="button" class="btn btn-danger btn-sm" id="login" >Logout</button>
+      <a><button routerLink="/home" (click)="logout()" type="button" class="btn btn-danger btn-sm" id="login" >Logout</button></a>
     </li>
   </ul>
-  {{logged}}
 </nav>
