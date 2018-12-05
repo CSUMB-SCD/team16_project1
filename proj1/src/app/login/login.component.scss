@@ -41,3 +41,16 @@ border-radius: 25px;
     font-size: 16px;
   }
 }
+
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open .dropdown-toggle.btn-info {
+
+  background-color: #ccf5ff !important;
+  background-repeat: repeat-x;
+  background-image: linear-gradient(#edf6fb, #008fb3);
+  border-color: #000;
+  color: #000!important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.59);
+ }
+ .btn-info {
+  background-color: #99ebff !important;
+ }
