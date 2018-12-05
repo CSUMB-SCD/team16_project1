@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "preinstall": "npm install -g @angular/cli @angular/compiler-cli typescript",
-    "postinstall": "ng build --aot --prod",
+    "postinstall": "ng build --prod",
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.8.8",
-    "@angular/cli": "^7.1.1",
-    "@angular/compiler-cli": "^6.1.10",
+    "@angular/cli": "^1.4.9",
+    "@angular/compiler-cli": "^4.4.6",
     "@angular/language-service": "^6.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
