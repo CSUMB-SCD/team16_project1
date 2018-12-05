@@ -24,7 +24,7 @@
       </a>
     </li>
     <li *ngIf='!logged'>
-        <button routerLink="" type="button" class="btn btn-success btn-sm" id="login" >Login</button>
+        <button routerLink="" type="button" class="btn btn-info btn-sm" id="login" >Login</button>
     </li>
     <li *ngIf="logged">
         <button routerLink="/home" (click)="logout()" type="button" class="btn btn-danger btn-sm" id="login" >Logout</button>
