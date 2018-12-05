@@ -14,7 +14,7 @@
       </a>
     </li>
     <li>
-      <a routerLink="cart" [class.activated]="currentUrl == '/cart'">
+      <a routerLink="checkout" [class.activated]="currentUrl == '/checkout'">
         <i class="material-icons">shopping_cart</i>
       </a>
     </li>
@@ -30,5 +30,4 @@
         <button routerLink="/home" (click)="logout()" type="button" class="btn btn-danger btn-sm" id="login" >Logout</button>
     </li>
   </ul>
-  {{logged}}
 </nav>
