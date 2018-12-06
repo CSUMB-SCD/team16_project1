@@ -28,7 +28,11 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 
 
 export class HomeComponent implements OnInit {
-
+  images = [
+    'https://i.pinimg.com/736x/04/7f/46/047f468286c538988a279d14027ef3b5.jpg',
+    'https://bkstr.scene7.com/is/image/Bkstr/2029-CUDDLEBUD-WDMK-Puppy?$GMCategory$&$MoreColors$',
+    'https://bkstr.scene7.com/is/image/Bkstr/6-66-1B--1P-1-Brown-Pink?$GMCategory$',
+  ];
   product$: Object;
   arraym = [];
   constructor(private data: DataService) { }
