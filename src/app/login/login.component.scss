@@ -1,12 +1,16 @@
 
 #wrap{
- margin: 10%
+ margin: auto;
+ width: 50%;
+ //background-image: url("src/app/gradient.png");
+ border-radius: 25px;
 }
 #login-container{
 text-align: center;
 margin: auto;
-width: 20%;
-border: 3px solid rgb(0, 0, 0);
+background: white;
+
+//border: 3px solid rgb(0, 0, 0);
 padding: 20px;
 border-radius: 25px;
 }
@@ -15,13 +19,15 @@ border-radius: 25px;
   input[type=text]{
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 5px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    background: lightgray;
   }
   input[type=password]{
+    background: lightgray;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -46,11 +52,15 @@ border-radius: 25px;
 
   background-color: #ccf5ff !important;
   background-repeat: repeat-x;
-  background-image: linear-gradient(#edf6fb, #008fb3);
-  border-color: #000;
-  color: #000!important;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.59);
+ // background-image: linear-gradient(#edf6fb, #008fb3);
+  //border-color:white;
+  color:white!important;
+  //text-shadow: 0 1px 1px rgba(255, 255, 255, 0.59);
  }
  .btn-info {
-  background-color: #99ebff !important;
+  //background-color: #b99bd7 !important;
+  background-image: url("src/app/gradient.png");
+  //border: white;
+ // border-width: 2px;
+ width: 50%;
  }
