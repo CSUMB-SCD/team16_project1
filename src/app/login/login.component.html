@@ -1,7 +1,7 @@
 <div id="wrap">
   <div id="login-container">
-    <h2>Login</h2>
-    <hr>
+    <h2 class = "text-dark">Login</h2>
+    <hr class = "text-dark">
     <div id="form">
           Username:<br>
           <input type="text" placeholder ="username" [(ngModel)]="userName">
@@ -9,7 +9,7 @@
           Password:<br>
           <input type="password"  [(ngModel)]="passWord" placeholder="password">
           <br><br>
-          <button [disabled]="succ"  type="button"  class="btn btn-info" (click)="onSubmit()" >Login</button>
+          <button  type="button"  class="btn btn-info" (click)="onSubmit()" >Login</button>
       </div>
   </div>
 </div>

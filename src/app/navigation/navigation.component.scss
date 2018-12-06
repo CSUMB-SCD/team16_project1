@@ -1,5 +1,5 @@
 nav {
-  background-color: #2D2E2E;
+  background-color:#262727;
   width:100%;
 
   display:flex;
@@ -11,7 +11,8 @@ nav {
       list-style-type: none;
 
       li {
-        float: left;
+        margin: auto;
+        text-align: center;
 
           a {
               color: #fff;

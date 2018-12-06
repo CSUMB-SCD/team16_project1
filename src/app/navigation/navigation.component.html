@@ -1,33 +1,30 @@
 <nav class= "nav-main">
   <ul>
     <li>
-      <a id="logo">OtterBuy</a>
-    </li>
-    <li>
       <a routerLink="home" [class.activated]="currentUrl == '/home'">
-        <i class="material-icons">home</i>
+        <i>Home</i>
       </a>
     </li>
     <li>
       <a routerLink="products" [class.activated]="currentUrl == '/products'">
-        <i class="material-icons">book</i>
+        <i>Products</i>
       </a>
     </li>
     <li>
       <a routerLink="checkout" [class.activated]="currentUrl == '/checkout'">
-        <i class="material-icons">shopping_cart</i>
+        <i>Cart</i>
       </a>
     </li>
-    <li>
+    <!-- <li>
       <a routerLink="/confirmation" [class.activated]="currentUrl == '/confirmation'">
         <i class="material-icons">confirm</i>
       </a>
-    </li>
+    </li> -->
     <li *ngIf='!logged'>
-        <button routerLink="" type="button" class="btn btn-info btn-sm" id="login" >Login</button>
+      <a routerLink="" id="login" >Login</a>
     </li>
     <li *ngIf="logged">
-        <button routerLink="/home" (click)="logout()" type="button" class="btn btn-danger btn-sm" id="login" >Logout</button>
+        <a routerLink="/home" (click)="logout()"  id="login" >Logout</a>
     </li>
   </ul>
 </nav>
