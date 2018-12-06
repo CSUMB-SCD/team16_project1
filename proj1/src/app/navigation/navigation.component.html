@@ -18,11 +18,6 @@
         <i class="material-icons">shopping_cart</i>
       </a>
     </li>
-    <li>
-      <a routerLink="/confirmation" [class.activated]="currentUrl == '/confirmation'">
-        <i class="material-icons">confirm</i>
-      </a>
-    </li>
     <li *ngIf='!logged'>
         <button routerLink="" type="button" class="btn btn-success btn-sm" id="login" >Login</button>
     </li>
