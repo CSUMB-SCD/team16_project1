@@ -19,13 +19,13 @@
             </td>
             <td>
               <h5>${{product.payment}}</h5>
-              <h6>In Stock: {{ product.stockNum}}</h6>
+              <h6>In Stock: {{product.stockNum}}</h6>
             </td>
             <td>
               <br>
-              <img src="https://png.icons8.com/windows/1600/add-shopping-cart.png" width="30px">
+              <img src="https://png.icons8.com/windows/1600/add-shopping-cart.png" (click)="addOneToCart(product.id)" width="30px">
             </td>
-            <td id="seeMore">
+            <td >
               <br>
               <a routerLink="/product-expanded/{{product.id}}">
                   <i class="material-icons">expand_more</i>

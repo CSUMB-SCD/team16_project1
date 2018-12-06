@@ -1,3 +1,4 @@
+import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,15 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
+  Cart: Array<any>[];
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+
   }
 
-  removeAll() {
+  removeAllInstances() {
   }
 
-
+  updateCart() {
+  }
 
 }

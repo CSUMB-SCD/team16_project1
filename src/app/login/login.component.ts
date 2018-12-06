@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
   passWord: string;
   succ = false;
   log = 0;
+  i: number;
+  size: number;
 
   constructor(private data: DataService, private router: Router) { }
 
