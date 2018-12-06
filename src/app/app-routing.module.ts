@@ -11,7 +11,7 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
     path: '',
-  component: LoginComponent
+  component: HomeComponent
   },
   {
     path: 'home',
@@ -33,6 +33,16 @@ const routes: Routes = [
     path: 'product-expanded/:id',
   component: ProductExpandedComponent
   },
+  {
+    path: 'login',
+  component: LoginComponent
+  },
+
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
