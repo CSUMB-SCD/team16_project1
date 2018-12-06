@@ -10,19 +10,15 @@
       <br>
     </div>
 
-    <div id="product" class = "text-dark">
-        <ul [@listStagger] = "product$">
-          <li *ngFor="let product of product$">
-              <a  routerLink="/product-expanded/{{product.id}}"> {{ product.name }}</a>
-              <ul>
-                  <li><img src= '{{ product.image["images"] }}' width="100px" > </li>
-                  <li>{{ product.description["description"] }}</li>
-              </ul>
-          </li>
-        </ul>
-
-
-    </div>
+    <ngb-carousel class="text-center container" [showNavigationArrows]="false" [showNavigationIndicators]="false" *ngIf="images">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <img class='img-main-carousel' [src]="image" width="500px">
+          <div class="carousel-caption">
+            <h3></h3>
+            <button [routerLink]="['/products']" class="btn btn-info">See our Products</button>
+          </div>
+        </ng-template>
+      </ngb-carousel>
 
   </div>
 </div>

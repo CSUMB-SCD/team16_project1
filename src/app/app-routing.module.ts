@@ -12,9 +12,10 @@ const routes: Routes = [
   {
     path: '',
   component: HomeComponent
+
   },
   {
-    path: 'home',
+  path: 'home',
   component: HomeComponent
   },
   {
@@ -26,7 +27,7 @@ const routes: Routes = [
   component: CartComponent
   },
   {
-    path: 'checkout',
+  path: 'checkout',
   component: CheckoutComponent
   },
   {
