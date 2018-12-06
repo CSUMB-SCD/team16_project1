@@ -1,8 +1,4 @@
 <div id="content">
-      <div id="search">
-        <input type="text" name="search" placeholder="  search">
-        <input type="image" src="https://static.thenounproject.com/png/101791-200.png" width="20px" name="saveForm" class="btTxt submit" id="saveForm" />
-      </div>
       <br>
       <h2>Products</h2>
       <hr>
@@ -25,10 +21,10 @@
               <br>
               <img src="https://png.icons8.com/windows/1600/add-shopping-cart.png" (click)="addOneToCart(product.id)" width="30px">
             </td>
-            <td >
+            <td>
               <br>
               <a routerLink="/product-expanded/{{product.id}}">
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons text-dark" ><strong>expand_more</strong></i>
                 </a>
             </td>
           </tr>
