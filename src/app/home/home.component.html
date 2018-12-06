@@ -10,9 +10,9 @@
       <br>
     </div>
 
-    <ngb-carousel class="text-center container" [showNavigationArrows]="false" [showNavigationIndicators]="false" *ngIf="images">
+    <ngb-carousel class="text-center container noselect" [showNavigationArrows]="true" [showNavigationIndicators]="true" *ngIf="images">
         <ng-template ngbSlide *ngFor="let image of images">
-          <img class='img-main-carousel' [src]="image" width="500px">
+          <img class='img-main-carousel' [src]="image" height="500px" width="500px">
           <div class="carousel-caption">
             <h3></h3>
             <button [routerLink]="['/products']" class="btn btn-info">See our Products</button>
