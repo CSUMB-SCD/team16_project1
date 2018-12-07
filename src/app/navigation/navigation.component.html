@@ -11,7 +11,7 @@
       </a>
     </li>
     <li>
-      <a routerLink="checkout" [class.activated]="currentUrl == '/checkout'">
+      <a routerLink="checkout" *ngIf="logged" [class.activated]="currentUrl == '/checkout'">
         <i>Cart</i>
       </a>
     </li>

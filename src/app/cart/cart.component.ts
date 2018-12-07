@@ -1,3 +1,4 @@
+import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,15 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
+  Cart: Object;
+  ProdList: Object;
+  user: any;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
   }
-
-  removeAll() {
-  }
-
-
 
 }

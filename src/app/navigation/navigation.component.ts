@@ -11,6 +11,8 @@ export class NavigationComponent implements OnInit, AfterViewChecked {
 
   currentUrl: string;
   logged: boolean;
+  i: number;
+  size: number;
 
   constructor(private router: Router) {
     // router.events.subscribe((_: NavigationEnd) => this.currentUrl = _.url);
@@ -27,6 +29,13 @@ export class NavigationComponent implements OnInit, AfterViewChecked {
   logout() {
     localStorage.removeItem('currentUser');
     localStorage.setItem('currentState', '0');
+
+    this.size = Number(localStorage.getItem('CartSize'));
+
+    localStorage.clear();
+
+    localStorage.setItem('CartSize', '0');
+
   }
 
 }
