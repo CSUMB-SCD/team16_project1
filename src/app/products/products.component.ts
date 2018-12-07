@@ -48,6 +48,7 @@ export class ProductsComponent implements OnInit {
 
   addOneToCart(item: string) {
     if (localStorage.getItem('currentUser') != null) {
+      alert('Item added to Cart');
 
       for (this.i = 1; this.i <= this.size; this.i++ ) {
         this.CartItemO = JSON.parse(localStorage.getItem('Item' + this.i.toString()));
@@ -68,6 +69,8 @@ export class ProductsComponent implements OnInit {
       this.CartItemI = {'Id' : this.size, 'prodId' : item, 'count' : 1 };
 
       localStorage.setItem('Item' + this.size , JSON.stringify(this.CartItemI));
+    } else {
+    alert('Please login');
     }
   }
 

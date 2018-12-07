@@ -32,11 +32,10 @@ export class NavigationComponent implements OnInit, AfterViewChecked {
 
     this.size = Number(localStorage.getItem('CartSize'));
 
-      for (this.i = 1; this.i <= this.size; this.i++ ) {
-        localStorage.removeItem('Item' + this.i.toString() );
-      }
+    localStorage.clear();
 
     localStorage.setItem('CartSize', '0');
+
   }
 
 }
