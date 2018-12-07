@@ -47,6 +47,6 @@ export class CheckoutComponent implements OnInit {
 
   calculate(price : number) {
     this.tot = this.tot + price;
-  }
+  } 
 
 }
