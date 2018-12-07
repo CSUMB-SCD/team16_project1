@@ -1,8 +1,6 @@
 import { DataService } from './../data.service';
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 @Component({
   selector: 'app-checkout',
