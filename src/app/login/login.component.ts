@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -16,16 +16,30 @@ export class LoginComponent implements OnInit {
   log = 0;
   i: number;
   size: number;
+  loginForm: FormGroup;
+  submitted = false;
 
-  constructor(private data: DataService, private router: Router) { }
+  constructor(private data: DataService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      username: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(4)]]
+    });
   }
 
+  get f() { return this.loginForm.controls; }
+
   onSubmit() {
+
+    this.submitted = true;
+
     this.data.getUsername(this.userName).subscribe(
       data => this.User$ = data);
 
+    if (this.loginForm.invalid) {
+      return;
+    }
 
     if (this.User$ != null) {
       this.succ = true;
