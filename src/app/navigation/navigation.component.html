@@ -21,7 +21,7 @@
       </a>
     </li> -->
     <li *ngIf='!logged'>
-      <a routerLink="" id="login" >Login</a>
+      <a routerLink="/login" id="login" >Login</a>
     </li>
     <li *ngIf="logged">
         <a routerLink="/home" (click)="logout()"  id="login" >Logout</a>

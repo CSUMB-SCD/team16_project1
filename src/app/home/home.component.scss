@@ -9,3 +9,16 @@
 #wrapper{
   text-align: center;
 }
+// Carousel Functionality
+.container {
+  padding: 0px;
+  margin-bottom: 2%;
+}
+
+img{
+  border-radius: 5%;
+}
+ngb-carousel, ng-template, div, img{
+  border: none;
+  outline: none;
+}

@@ -28,7 +28,11 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 
 
 export class HomeComponent implements OnInit {
-
+  images = [
+    'https://i.pinimg.com/736x/04/7f/46/047f468286c538988a279d14027ef3b5.jpg',
+    'https://gifts.worldwildlife.org/gift-center/images/species-adoptions/Sea-Otter/Sea-Otter-plush-z1.jpg',
+    'https://images-na.ssl-images-amazon.com/images/I/81Xn0Fyr5AL._SL1500_.jpg',
+  ];
   product$: Object;
   arraym = [];
   constructor(private data: DataService) { }

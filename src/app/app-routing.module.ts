@@ -11,10 +11,11 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
     path: '',
-  component: LoginComponent
+  component: HomeComponent
+
   },
   {
-    path: 'home',
+  path: 'home',
   component: HomeComponent
   },
   {
@@ -26,13 +27,23 @@ const routes: Routes = [
   component: CartComponent
   },
   {
-    path: 'checkout',
+  path: 'checkout',
   component: CheckoutComponent
   },
   {
     path: 'product-expanded/:id',
   component: ProductExpandedComponent
   },
+  {
+    path: 'login',
+  component: LoginComponent
+  },
+
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
