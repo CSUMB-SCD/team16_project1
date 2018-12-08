@@ -17,21 +17,21 @@
             <form>
               <div class="products" class= "text-dark">
                 <h3 class="title">Checkout</h3>
-                <div class="item" *ngFor= "let item of data.cartObject" >
+                <div class="item" *ngFor= "let item of data.cartObject; let i=index;" >
                   <p class="item-name"><img width=100px src='{{item.image.images}}'></p>
                   <p class="item-name">{{item.name}}</p>
                   <p class="item-description">{{item.description["description"]}}</p>
                   <span class="price">Item Price: ${{item.payment}} X </span>
-                  <input [(ngModel)]="item.quant"  name = "quantity" type="number" min="1" max="5" (ngModelChange)="calculate(item.payment*item.quant)" >
-                  <span class="price" [(ngModel)]="cumPrice" [ngModelOptions]="{standalone: true}"> = ${{item.payment*item.quant}}</span>
+                  <input [(ngModel)]="item.quant"  name = "quantity" type="number" min="1" max="5" (ngModelChange)= "setCost(item.id,item.payment*item.quant)" >
+                  <span class="price" [(ngModel)]="cumPrice"  [ngModelOptions]="{standalone: true}"  > = ${{ item.payment*item.quant }}</span>
                   <br>
                   <br>
                   <button type="button" class="btn btn-danger btn-sm">Remove</button>
                 </div>
-                <div class="total">Total <span class="price">${{tot}}</span></div>
                 <br>
                 <div class="form-group col-sm-12">
-                  <button type="button"  class="btn btn-primary btn-block">Update</button>
+                  <button type="button"  class="btn btn-primary btn-block" (click) = "calculate()">Update</button>
+                  <div class="total">Total <span class="price" >${{tot}}</span></div>
                 </div>
               </div>
               <div class="card-details">
@@ -66,4 +66,3 @@
           </div>
         </section>
       </main>
-      

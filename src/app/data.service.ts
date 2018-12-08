@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 export class DataService {
 
   constructor(private http: HttpClient) {}
-  cartObject: {
+ public cartObject: {
     id: String,
     description: Object,
     image: Object,
