@@ -52,25 +52,6 @@ export class ProductsComponent implements OnInit {
      this.data. addToCart(item, q);
       alert('Item added to Cart');
 
-     // for (this.i = 1; this.i <= this.size; this.i++ ) {
-     //    this.CartItemO = JSON.parse(localStorage.getItem('Item' + this.i.toString()));
-     //    if (this.CartItemO.prodId === item) {
-     //      this.tot = Number(this.CartItemO.count);
-     //      this.tot++;
-     //      this.order = this.CartItemO.Id;
-     //      this.CartItemI = {'Id' : this.order, 'prodId' : item, 'count' : this.tot };
-     //     localStorage.setItem('Item' + this.order, JSON.stringify(this.CartItemI));
-     //     return;
-     //    }
-     //  }
-
-     //  this.size = Number(localStorage.getItem('CartSize'));
-     //  this.size++;
-     //  localStorage.setItem('CartSize', this.size.toString());
-
-     //  this.CartItemI = {'Id' : this.size, 'prodId' : item, 'count' : 1 };
-
-     //  localStorage.setItem('Item' + this.size , JSON.stringify(this.CartItemI));
     } else {
     alert('Please login');
     }

@@ -9,7 +9,6 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class CheckoutComponent implements OnInit {
   Cart: Object[];
-  // prices: number[];
   prod$: Object;
   CartItemO: any;
   temp: string;
@@ -29,22 +28,9 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit() {
-    // if (localStorage.getItem('currentUser') != null) {
-    //   for (this.i = 1; this.i <= Number(localStorage.getItem('CartSize')); this.i++ ) {
-    //     this.CartItemO = JSON.parse(localStorage.getItem('Item' + this.i.toString()));
-    //     this.data.getProductID(this.CartItemO.prodId.toString()).subscribe(
-    //       data => this.prod$ =  data
-    //     );
-
-    //     this.Cart.push(this.prod$);
-    //   }
-    // }
   console.log(this.data.cartObject);
     this.tot = 0;
 
-  }
-
-  removeAllInstances() {
   }
 
   setCost(i: string, price: number) {
@@ -63,7 +49,7 @@ export class CheckoutComponent implements OnInit {
         this.tot += this.prices[i].p;
         console.log('help' + this.tot);
     }
-    // this.prices = [];
+
     return this.tot;
   }
 

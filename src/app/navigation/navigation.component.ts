@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { DataService } from '../data.service';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -14,7 +15,7 @@ export class NavigationComponent implements OnInit, AfterViewChecked {
   i: number;
   size: number;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, public data: DataService) {
     // router.events.subscribe((_: NavigationEnd) => this.currentUrl = _.url);
     router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((_: NavigationEnd) => this.currentUrl = _.url);
    }
@@ -33,6 +34,8 @@ export class NavigationComponent implements OnInit, AfterViewChecked {
     this.size = Number(localStorage.getItem('CartSize'));
 
     localStorage.clear();
+
+    this.data.deleteAll();
 
     localStorage.setItem('CartSize', '0');
 

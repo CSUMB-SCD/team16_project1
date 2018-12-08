@@ -15,16 +15,11 @@
         <i>Cart</i>
       </a>
     </li>
-    <!-- <li>
-      <a routerLink="/confirmation" [class.activated]="currentUrl == '/confirmation'">
-        <i class="material-icons">confirm</i>
-      </a>
-    </li> -->
     <li *ngIf='!logged'>
-      <a routerLink="/login" id="login" >Login</a>
+      <a routerLink="/login" id="login" [class.activated]="currentUrl == '/login'" >Login</a>
     </li>
     <li *ngIf="logged">
-        <a routerLink="/home" (click)="logout()"  id="login" >Logout</a>
+        <a routerLink="/home" (click)="logout()"  id="login"  >Logout</a>
     </li>
   </ul>
 </nav>
