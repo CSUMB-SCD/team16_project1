@@ -6,9 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 
 export class DataService {
-
-  constructor(private http: HttpClient) {}
- public cartObject: {
+  public cartObject: {
     id: String,
     description: Object,
     image: Object,
@@ -17,6 +15,9 @@ export class DataService {
     price: number,
     quant: number
   } [] = [];
+
+  constructor(private http: HttpClient) {}
+
 
   // tslint:disable-next-line:max-line-length
   addToCart(product: {id: String, description: Object, image: Object, stock: number, name: String, price: number, quant: number}, quantity: number) {
