@@ -39,4 +39,15 @@ export class ProductExpandedComponent implements OnInit {
     this.data.getProductID(this.product$).subscribe(data => this.product$ = data);
   }
 
+  // tslint:disable-next-line:max-line-length
+  addOneToCart(item: {id: String, description: Object, image: Object, stock: number, name: String, price: number, quant: number}, q: number) {
+    if (localStorage.getItem('currentUser') != null) {
+     this.data. addToCart(item, q);
+      alert('Item added to Cart');
+
+    } else {
+    alert('Please login');
+    }
+  }
+
 }

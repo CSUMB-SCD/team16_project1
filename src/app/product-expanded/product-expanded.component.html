@@ -1,8 +1,21 @@
 <div *ngIf = "product$" >
-    <h1>{{ product$.name }}</h1>
-    <ul class= "text-dark">
-        <li><img src= '{{ product$.image["images"] }}'width="100px" >
-         {{ product$.description["description"] }} <br>
-        Quantity: {{ product$.stockNum }}</li>
-      </ul>
-  </div>
+  <table class="table">
+    <tr class="product" >
+      <td>
+          <img src='{{ product$.image["images"] }}' width="350px">
+      </td>
+      <td>
+        <h3 class=ProdName>{{ product$.name }}</h3>
+        <p>{{ product$.description["description"] }}</p>
+      </td>
+      <td>
+        <h5>${{product$.payment}}</h5>
+        <h6>In Stock: {{product$.stockNum}}</h6>
+      </td>
+      <td>
+        <br>
+        <img id="cart" src="https://png.icons8.com/windows/1600/add-shopping-cart.png" (click)="addOneToCart(product$,1)" width="30px">
+      </td>
+    </tr>
+  </table>
+</div>
