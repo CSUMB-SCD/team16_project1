@@ -9,6 +9,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class CheckoutComponent implements OnInit {
   Cart: Object[];
+  // prices: number[];
   prod$: Object;
   CartItemO: any;
   temp: string;
@@ -16,6 +17,11 @@ export class CheckoutComponent implements OnInit {
   cat: number;
   i: number;
   currenturl: string;
+
+  public prices: {
+    id: String,
+    p: number
+  } [] = [];
 
 
   constructor(private data: DataService, private router: Router) {
@@ -33,18 +39,32 @@ export class CheckoutComponent implements OnInit {
     //     this.Cart.push(this.prod$);
     //   }
     // }
-    console.log(this.data.cartObject);
+  console.log(this.data.cartObject);
     this.tot = 0;
+
   }
 
   removeAllInstances() {
   }
 
-  updateCart() {
+  setCost(i: string, price: number) {
+    const index = this.prices.findIndex(data => data.id === i);
+   if (index === -1) {
+    this.prices.push({id: i, p: price});
+   } else {
+     this.prices[index].p = price;
+   }
   }
 
-  calculate(price : number) {
-    this.tot = this.tot + price;
-  } 
+  calculate() {
+    this.tot = 0;
+    console.log(this.prices);
+    for (let i = 0; i < this.prices.length; i++) {
+        this.tot += this.prices[i].p;
+        console.log('help' + this.tot);
+    }
+    // this.prices = [];
+    return this.tot;
+  }
 
 }
