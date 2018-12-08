@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router, ActivatedRoute, UrlSerializer } from '@angular/router';
+import { ValidatorFn, AbstractControl, FormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -22,10 +22,13 @@ export class LoginComponent implements OnInit {
   constructor(private data: DataService, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.succ = false;
+
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(4)]]
-    });
+      password: ['', [Validators.required, Validators.minLength(4) ]]
+    }
+    );
   }
 
   get f() { return this.loginForm.controls; }
@@ -33,6 +36,8 @@ export class LoginComponent implements OnInit {
   onSubmit() {
 
     this.submitted = true;
+    this.userName = this.f.username.value;
+    this.passWord = this.f.password.value;
 
     this.data.getUsername(this.userName).subscribe(
       data => this.User$ = data);
@@ -47,7 +52,6 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/home']);
       localStorage.setItem('currentUser', JSON.stringify(this.userName));
       localStorage.setItem('currentState', JSON.stringify(this.log));
-      alert('Login Successful');
     }
   }
 }

@@ -3,7 +3,7 @@
     <h2 class = "text-dark">Login</h2>
     <hr class = "text-dark">
     <form [formGroup]="loginForm" id="form" (ngSubmit)="onSubmit()">
-      <div class="formGroup">
+      <div class="form-group">
           <label class="text-dark">Username: </label>
           <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" placeholder ="username" >
           <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
@@ -15,10 +15,11 @@
         <input type="password"  formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="password">
         <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
             <div *ngIf="f.password.errors.required">Password is required</div>
-            <div *ngIf="f.password.errors.minlength">Password must be at least 4 characters</div>
-        </div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 4 characters</div>        </div>
       </div>
+      <div class="form-group" >
           <button class="btn btn-info">Login</button>
+      </div>
     </form>
   </div>
 </div>
