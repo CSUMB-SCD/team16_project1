@@ -24,7 +24,7 @@ export class CheckoutComponent implements OnInit {
   } [] = [];
 
 
-  constructor(private data: DataService, private router: Router) {
+  constructor(public data: DataService, private router: Router) {
     router.events.subscribe((_: NavigationEnd) => this.currenturl = _.url);
   }
 
